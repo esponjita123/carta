@@ -1,0 +1,391 @@
+/* =========================
+   Configuración General
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:linear-gradient(135deg,#ffe5ec,#ffc2d1);
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+/* =========================
+   Contenedor Principal
+========================= */
+
+.contenedor-principal{
+
+    width:88vw;
+    height:82vh;
+
+    display:flex;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+/* =========================
+   Texto
+========================= */
+
+.seccion-texto{
+
+    width:50%;
+
+    padding:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.efecto-escritura{
+
+    width:100%;
+
+    height:100%;
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+    scroll-behavior:smooth;
+
+}
+
+.efecto-escritura::-webkit-scrollbar{
+
+    width:0;
+
+}
+
+.linea{
+
+    display:block;
+
+    width:100%;
+
+    margin-bottom:18px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#555;
+
+    line-height:1.6;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+    overflow-wrap:break-word;
+
+    position:relative;
+
+}
+
+/* =========================
+   Cursor
+========================= */
+
+.linea.escribiendo::after{
+
+    content:"|";
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+    margin-left:2px;
+
+    animation:cursor .7s infinite;
+
+}
+
+@keyframes cursor{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+/* =========================
+   Destacado
+========================= */
+
+.font-destacado{
+
+    color:#ff4d6d;
+
+    font-size:1.08rem;
+
+    font-weight:700;
+
+}
+
+/* =========================
+   Fotos
+========================= */
+
+.seccion-fotos{
+
+    width:50%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.slider-apilado{
+
+    width:100%;
+
+    height:100%;
+
+    position:relative;
+
+}
+
+.diapositiva{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    opacity:0;
+
+}
+
+.diapositiva img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.d1{
+
+    animation:fade 24s infinite 0s;
+
+}
+
+.d2{
+
+    animation:fade 24s infinite 6s;
+
+}
+
+.d3{
+
+    animation:fade 24s infinite 12s;
+
+}
+
+.d4{
+
+    animation:fade 24s infinite 18s;
+
+}
+
+@keyframes fade{
+
+    0%,15%{
+
+        opacity:0;
+
+    }
+
+    20%,35%{
+
+        opacity:1;
+
+    }
+
+    40%,100%{
+
+        opacity:0;
+
+    }
+
+}
+
+/* =========================
+   Música
+========================= */
+
+.reproductor{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:20px;
+
+    opacity:.6;
+
+    z-index:20;
+
+}
+
+/* =========================
+   Corazones
+========================= */
+
+.corazon-cursor{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    background:#ff4d6d;
+
+    transform:translate(-50%,-50%) rotate(45deg);
+
+    animation:heart 1s linear forwards;
+
+    z-index:9999;
+
+}
+
+.corazon-cursor::before,
+
+.corazon-cursor::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:#ff4d6d;
+
+    border-radius:50%;
+
+}
+
+.corazon-cursor::before{
+
+    left:-50%;
+
+}
+
+.corazon-cursor::after{
+
+    top:-50%;
+
+}
+
+@keyframes heart{
+
+    0%{
+
+        opacity:1;
+
+        transform:translate(-50%,-50%) rotate(45deg) scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(-50%,-150%) rotate(45deg) scale(0);
+
+    }
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:768px){
+
+    .contenedor-principal{
+
+        flex-direction:column;
+
+        width:95vw;
+
+        height:92vh;
+
+    }
+
+    .seccion-texto,
+
+    .seccion-fotos{
+
+        width:100%;
+
+        height:50%;
+
+    }
+
+    .seccion-texto{
+
+        padding:20px;
+
+    }
+
+    .linea{
+
+        font-size:.92rem;
+
+        margin-bottom:14px;
+
+    }
+
+    .font-destacado{
+
+        font-size:1rem;
+
+    }
+
+}
