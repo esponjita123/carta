@@ -8,191 +8,203 @@
 </head>
 <body>
 
-<div class="contenedor-principal">
+    <!-- PANTALLA DE INICIO (Camuflaje y Activador de Música) -->
+    <div id="pantalla-inicio" class="overlay-inicio">
+        <div class="carta-bienvenida">
+            <h2>Tengo algo que decirte... 💌</h2>
+            <p>Por favor, dale clic al botón para abrir la carta.</p>
+            <button id="btn-iniciar" class="boton-corazon">Iniciar ❤️</button>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenedor-principal" id="contenido-carta" style="display: none; opacity: 0; transition: opacity 1s ease;">
         <!-- Sección Izquierda: Texto con la carta de disculpas y reflexiones -->
         <div class="seccion-texto">
             <div class="efecto-escritura">
-                <p class="linea">Perdóname, mi niña...</p>
-                <p class="linea">Tal vez te dije algo que te molestó, si hice algo que te hirió, perdóname.</p>
-                <p class="linea">No quiero que este momento nos aleje.</p>
-                <p class="linea">Sé que hemos tenido diferencias, pero creo de verdad que aún podemos escribir una historia muy bonita juntos.</p>
-                <p class="linea">Todavía nos quedan muchas risas, recuerdos, aventuras y momentos por vivir.</p>
-                <p class="linea">No quiero que unas cuantas discusiones o un mal momento sean el final de algo que apenas está comenzando.</p>
-                <p class="linea">Quiero seguir conociéndote, seguir aprendiendo de ti y construir algo bonito contigo.</p>
+                <p class="linea">Perdóname, mi niña... 🥺</p>
+                <p class="linea">Tal vez te dije algo que te molestó, si hice algo que te hirió, perdóname. 😔</p>
+                <p class="linea">No quiero que este momento nos aleje. 💔</p>
+                <p class="linea">Sé que hemos tenido diferencias, pero creo de verdad que aún podemos escribir una historia muy bonita juntos. ✨</p>
+                <p class="linea">Todavía nos quedan muchas risas, recuerdos, aventuras y momentos por vivir. 🗺️🎒</p>
+                <p class="linea">No quiero que unas cuantas discusiones o un mal momento sean el final de algo que apenas está comenzando. 🌱</p>
+                <p class="linea">Quiero seguir conociéndote, seguir aprendiendo de ti y construir algo bonito contigo. 💞</p>
                 
                 <!-- Reflexión 1: Proyectos y Metas -->
-                <p class="linea">Me emociona mucho pensar en nuestros proyectos, en las metas que hemos platicado y en cómo podemos apoyarnos mutuamente. Sé que si trabajamos como el equipo que somos, podemos cumplir todo lo que nos propongamos y celebrar juntos cada logro.</p>
+                <p class="linea">Me emociona mucho pensar en nuestros proyectos, en las metas que hemos platicado y en cómo podemos apoyarnos mutuamente. Sé que si trabajamos como el equipo que somos, podemos cumplir todo lo que nos propongamos y celebrar juntos cada logro. 🤝🏆</p>
                 
                 <!-- Reflexión 2: Crecimiento y Madurez -->
-                <p class="linea">Las diferencias son normales en cualquier relación, pero creo que la clave está en saber cómo sanar juntos. Todo esto me sirve para entenderte mejor, aprender cómo cuidarte y recordarme que las cosas que valen la pena requieren paciencia. Quiero que crezcamos juntos y salgamos más fuertes para todo lo que viene adelante.</p>
+                <p class="linea">Las diferencias son normales en cualquier relación, pero creo que la clave está en saber cómo sanar juntos. Todo esto me sirve para entenderte mejor, aprender cómo cuidarte y recordarme que las cosas que valen la pena requieren paciencia. Quiero que crezcamos juntos y salgamos más fuertes para todo lo que viene adelante. 🩹🫂</p>
                 
                 <!-- Reflexión 3: Visión de Futuro -->
-                <p class="linea">Contigo el futuro se ve mucho más bonito. Me ilumina la idea de caminar de la mano, apoyarte en tus días difíciles y construir un espacio seguro para los dos. Tenemos el potencial de crear algo hermoso, y de verdad no quiero dejarlo ir por un malentendido.</p>
+                <p class="linea">Contigo el futuro se ve mucho más bonito. Me ilumina la idea de caminar de la mano, apoyarte en tus días difíciles y construir un espacio seguro para los dos. Tenemos el potencial de crear algo hermoso, y de verdad no quiero dejarlo ir por un malentendido. 🌅🏡</p>
                 
-                <p class="linea">No te escribo esto para presionarte ni para darte lástima, sino porque eres una persona que de verdad me importa.</p>
-                <p class="linea">Te quiero muchísimo, más de lo que imaginas, y no quisiera perder la oportunidad de seguir compartiendo mi vida contigo.</p>
-                <p class="linea">Apenas llevamos un mes, pero para mí ha sido suficiente para darme cuenta de que quiero seguir intentando.</p>
-                <p class="linea font-destacado">Si tú también lo deseas, prometo que haré todo lo posible para que nuestra historia tenga muchos capítulos más. ❤️</p>
+                <p class="linea">No te escribo esto para presionarte ni para darte lástima, sino porque eres una persona que de verdad me importa. 🧸</p>
+                <p class="linea">Te quiero muchísimo, más de lo que imaginas, y no quisiera perder la oportunidad de seguir compartiendo mi vida contigo. 🔐❤️</p>
+                <p class="linea">Apenas llevamos un mes, pero para mí ha sido suficiente para darme cuenta de que quiero seguir intentando. 🗓️🥀</p>
+                <p class="linea font-destacado">Si tú también lo deseas, prometo que haré todo lo posible para que nuestra historia tenga muchos capítulos más. ❤️📖</p>
             </div>
         </div>
 
-
-<!-- Fotos numeradas correctamente del 1 al 7 -->
+        <!-- Fotos numeradas correctamente del 1 al 7 -->
         <div class="seccion-fotos">
             <div class="slider-apilado">
-                <div class="diapositiva d1">
-                    <img src="HERMOSA.jfif" alt="">
-                </div>
-                <div class="diapositiva d2">
-                    <img src="HERMOSA1.jfif" alt="">
-                </div>
-                <div class="diapositiva d3">
-                    <img src="HERMOSA2.jfif" alt="">
-                </div>
-                <div class="diapositiva d4">
-                    <img src="HERMOSA3.jfif" alt="">
-                </div>
-                <div class="diapositiva d5">
-                    <img src="HERMOSA 5.jfif" alt="">
-                </div>
-                <div class="diapositiva d6">
-                    <img src="HERMOSA6.jfif" alt="">
-                </div>
-                <div class="diapositiva d7">
-                    <img src="HERMOSA7.jfif" alt="">
-                </div>
+                <div class="diapositiva d1"><img src="HERMOSA.jfif" alt=""></div>
+                <div class="diapositiva d2"><img src="HERMOSA1.jfif" alt=""></div>
+                <div class="diapositiva d3"><img src="HERMOSA2.jfif" alt=""></div>
+                <div class="diapositiva d4"><img src="HERMOSA3.jfif" alt=""></div>
+                <div class="diapositiva d5"><img src="HERMOSA 5.jfif" alt=""></div>
+                <div class="diapositiva d6"><img src="HERMOSA6.jfif" alt=""></div>
+                <div class="diapositiva d7"><img src="HERMOSA7.jfif" alt=""></div>
+                <div class="diapositiva d8"><img src="HERMOSA8.jpg" alt=""></div>
+                <div class="diapositiva d8"><img src="HERMOSA9.jpg" alt=""></div>
             </div>
         </div>
-
     </div>
 
     <!-- Música -->
-    <audio class="reproductor" controls autoplay loop>
+    <audio id="musica-fondo" loop>
         <source src="LOSIENTO.mp3" type="audio/mpeg">
     </audio>
 
 <script>
 
 // =======================
-// Corazones en el cursor
+// LÓGICA DE INICIO (Con Efecto Sorpresa de Estrellas)
 // =======================
+const btnIniciar = document.getElementById("btn-iniciar");
+const pantallaInicio = document.getElementById("pantalla-inicio");
+const contenidoCarta = document.getElementById("contenido-carta");
+const audio = document.getElementById("musica-fondo");
 
+btnIniciar.addEventListener("click", () => {
+    // 1. Activar música
+    audio.play().catch(error => console.log("Error de audio:", error));
+    
+    // 2. Lanzar la ráfaga de estrellas de sorpresa
+    lanzarEstrellasSorpresa();
+    
+    // 3. Ocultar pantalla de bienvenida
+    pantallaInicio.style.opacity = "0";
+    setTimeout(() => {
+        pantallaInicio.style.display = "none";
+        
+        // 4. Mostrar contenido principal
+        contenidoCarta.style.display = "flex";
+        setTimeout(() => {
+            contenidoCarta.style.opacity = "1";
+            iniciarEfectoEscritura();
+        }, 50);
+    }, 600);
+});
+
+// FUNCIÓN PARA EL EFECTO DE ESTRELLAS (Dura de 3 a 4 segundos)
+function lanzarEstrellasSorpresa() {
+    const totalEstrellas = 50; // Cantidad de estrellas en la explosión
+    const simbolos = ["⭐", "✨", "🌟", "✨"];
+    
+    for (let i = 0; i < totalEstrellas; i++) {
+        const estrella = document.createElement("div");
+        estrella.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+        estrella.style.position = "fixed";
+        estrella.style.left = "50vw";
+        estrella.style.top = "50vh";
+        estrella.style.fontSize = Math.random() * 20 + 15 + "px";
+        estrella.style.zIndex = "15000";
+        estrella.style.pointerEvents = "none";
+        estrella.style.transition = "all 3.5s cubic-bezier(0.1, 0.8, 0.3, 1)";
+        
+        document.body.appendChild(estrella);
+        
+        // Calcular direcciones aleatorias hacia afuera (explosión de 360 grados)
+        const angulo = Math.random() * Math.PI * 2;
+        const distancia = Math.random() * 300 + 100; // Distancia que viajarán
+        const destinoX = Math.cos(angulo) * distancia;
+        const destinoY = Math.sin(angulo) * distancia;
+        
+        // Ejecutar el movimiento y desvanecimiento
+        setTimeout(() => {
+            estrella.style.transform = `translate(${destinoX}px, ${destinoY}px) scale(0)`;
+            estrella.style.opacity = "0";
+        }, 50);
+        
+        // Eliminar por completo el elemento del código después de 3.5 segundos
+        setTimeout(() => {
+            estrella.remove();
+        }, 3500);
+    }
+}
+
+// =======================
+// Corazones continuos en el cursor
+// =======================
 document.addEventListener("mousemove",(e)=>{
-
     crearCorazon(e.clientX,e.clientY);
-
 });
 
 document.addEventListener("touchmove",(e)=>{
-
-    crearCorazon(
-        e.touches[0].clientX,
-        e.touches[0].clientY
-    );
-
+    crearCorazon(e.touches[0].clientX, e.touches[0].clientY);
 });
 
 function crearCorazon(x,y){
-
     const corazon=document.createElement("div");
-
     corazon.className="corazon-cursor";
-
     corazon.style.left=x+"px";
-
     corazon.style.top=y+"px";
-
     const size=Math.random()*8+6;
-
     corazon.style.width=size+"px";
-
     corazon.style.height=size+"px";
-
     document.body.appendChild(corazon);
-
     setTimeout(()=>{
-
         corazon.remove();
-
     },1000);
-
 }
 
-
-
 // =======================
-// Máquina de escribir
+// Máquina de escribir (CORREGIDA)
 // =======================
-
-document.addEventListener("DOMContentLoaded",()=>{
-
+function iniciarEfectoEscritura() {
     const contenedor=document.querySelector(".efecto-escritura");
-
     const lineas=document.querySelectorAll(".linea");
-
     const textos=[];
 
     lineas.forEach((linea)=>{
-
         textos.push(linea.textContent);
-
         linea.textContent="";
-
         linea.style.display="none";
-
     });
 
     let lineaActual=0;
 
     function escribirLinea(){
-
         if(lineaActual>=lineas.length){
-
             return;
-
         }
 
         const elemento=lineas[lineaActual];
-
         const texto=textos[lineaActual];
 
         elemento.style.display="block";
-
         elemento.classList.add("escribiendo");
 
         let indice=0;
 
         function escribir(){
-
-            if(indice<=texto.length){
-
+            if(indice<=texto.length){ // <- Aquí estaba el error corregido
                 elemento.textContent=texto.substring(0,indice);
-
                 indice++;
-
                 contenedor.scrollTop=contenedor.scrollHeight;
-
-                setTimeout(escribir,35);
-
+                setTimeout(escribir,80);
             }else{
-
                 elemento.classList.remove("escribiendo");
-
                 lineaActual++;
-
                 setTimeout(escribirLinea,900);
-
             }
-
         }
-
         escribir();
-
     }
-
-    setTimeout(escribirLinea,800);
-
-});
+    setTimeout(escribirLinea,400);
+}
 
 </script>
 

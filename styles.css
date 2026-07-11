@@ -208,15 +208,16 @@ body{
 
 }
 
-/* Animación balanceada para las 7 imágenes */
-.slider-apilado .d1 { animation: desvanecimientoCruzado 42s infinite 0s; }
-.slider-apilado .d2 { animation: desvanecimientoCruzado 42s infinite 6s; }
-.slider-apilado .d3 { animation: desvanecimientoCruzado 42s infinite 12s; }
-.slider-apilado .d4 { animation: desvanecimientoCruzado 42s infinite 18s; }
-.slider-apilado .d5 { animation: desvanecimientoCruzado 42s infinite 24s; }
-.slider-apilado .d6 { animation: desvanecimientoCruzado 42s infinite 30s; }
-.slider-apilado .d7 { animation: desvanecimientoCruzado 42s infinite 36s; }
-
+/* Animación balanceada perfectamente para las 10 imágenes */
+.slider-apilado .d1  { animation: desvanecimientoCruzado 48s infinite 0s; }
+.slider-apilado .d2  { animation: desvanecimientoCruzado 48s infinite 6s; }
+.slider-apilado .d3  { animation: desvanecimientoCruzado 48s infinite 12s; }
+.slider-apilado .d4  { animation: desvanecimientoCruzado 48s infinite 18s; }
+.slider-apilado .d5  { animation: desvanecimientoCruzado 48s infinite 24s; }
+.slider-apilado .d6  { animation: desvanecimientoCruzado 48s infinite 30s; }
+.slider-apilado .d7  { animation: desvanecimientoCruzado 48s infinite 36s; }
+.slider-apilado .d8  { animation: desvanecimientoCruzado 48s infinite 42s; }
+.slider-apilado .d9  { animation: desvanecimientoCruzado 48s infinite 48s; }
 @keyframes desvanecimientoCruzado{
 
     0%,15%{
@@ -373,4 +374,65 @@ body{
 
     }
 
+}
+/* ==========================================
+   ESTILOS PARA LA PANTALLA DE INICIO (CARTA)
+   ========================================== */
+.overlay-inicio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.6s ease;
+}
+
+.carta-bienvenida {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border: 2px dashed #ff4d6d;
+}
+
+.carta-bienvenida h2 {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.carta-bienvenida p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.boton-corazon {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.boton-corazon:hover {
+    background: #ff758f;
+    transform: scale(1.05);
+}
+
+.boton-corazon:active {
+    transform: scale(0.95);
 }
