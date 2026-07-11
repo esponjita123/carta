@@ -208,31 +208,16 @@ body{
 
 }
 
-.d1{
+/* Animación balanceada para las 7 imágenes */
+.slider-apilado .d1 { animation: desvanecimientoCruzado 42s infinite 0s; }
+.slider-apilado .d2 { animation: desvanecimientoCruzado 42s infinite 6s; }
+.slider-apilado .d3 { animation: desvanecimientoCruzado 42s infinite 12s; }
+.slider-apilado .d4 { animation: desvanecimientoCruzado 42s infinite 18s; }
+.slider-apilado .d5 { animation: desvanecimientoCruzado 42s infinite 24s; }
+.slider-apilado .d6 { animation: desvanecimientoCruzado 42s infinite 30s; }
+.slider-apilado .d7 { animation: desvanecimientoCruzado 42s infinite 36s; }
 
-    animation:fade 24s infinite 0s;
-
-}
-
-.d2{
-
-    animation:fade 24s infinite 6s;
-
-}
-
-.d3{
-
-    animation:fade 24s infinite 12s;
-
-}
-
-.d4{
-
-    animation:fade 24s infinite 18s;
-
-}
-
-@keyframes fade{
+@keyframes desvanecimientoCruzado{
 
     0%,15%{
 

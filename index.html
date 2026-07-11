@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div class="contenedor-principal">
+<div class="contenedor-principal">
         <!-- Sección Izquierda: Texto con la carta de disculpas y reflexiones -->
         <div class="seccion-texto">
             <div class="efecto-escritura">
@@ -36,122 +36,162 @@
             </div>
         </div>
 
-        <!-- Sección Derecha: Tus Fotos Apiladas con Desvanecimiento -->
+
+<!-- Fotos numeradas correctamente del 1 al 7 -->
         <div class="seccion-fotos">
             <div class="slider-apilado">
                 <div class="diapositiva d1">
-                    <img src="HERMOSA.jfif" alt="Foto 1">
+                    <img src="HERMOSA.jfif" alt="">
                 </div>
                 <div class="diapositiva d2">
-                    <img src="HERMOSA1.jfif" alt="Foto 2">
+                    <img src="HERMOSA1.jfif" alt="">
                 </div>
                 <div class="diapositiva d3">
-                    <img src="HERMOSA2.jfif" alt="Foto 3">
+                    <img src="HERMOSA2.jfif" alt="">
                 </div>
                 <div class="diapositiva d4">
-                    <img src="HERMOSA3.jfif" alt="Foto 4">
+                    <img src="HERMOSA3.jfif" alt="">
+                </div>
+                <div class="diapositiva d5">
+                    <img src="HERMOSA 5.jfif" alt="">
+                </div>
+                <div class="diapositiva d6">
+                    <img src="HERMOSA6.jfif" alt="">
+                </div>
+                <div class="diapositiva d7">
+                    <img src="HERMOSA7.jfif" alt="">
                 </div>
             </div>
         </div>
+
     </div>
 
-    <!-- Música de fondo inmersiva (sin barra gris visible) -->
-    <audio id="musica-fondo" class="reproductor" autoplay loop>
+    <!-- Música -->
+    <audio class="reproductor" controls autoplay loop>
         <source src="LOSIENTO.mp3" type="audio/mpeg">
     </audio>
 
 <script>
 
 // =======================
-// Corazones en el cursor (Dedo o Mouse)
+// Corazones en el cursor
 // =======================
-document.addEventListener("mousemove", (e) => {
-    crearCorazon(e.clientX, e.clientY);
+
+document.addEventListener("mousemove",(e)=>{
+
+    crearCorazon(e.clientX,e.clientY);
+
 });
 
-document.addEventListener("touchmove", (e) => {
-    crearCorazon(e.touches[0].clientX, e.touches[0].clientY);
+document.addEventListener("touchmove",(e)=>{
+
+    crearCorazon(
+        e.touches[0].clientX,
+        e.touches[0].clientY
+    );
+
 });
 
-function crearCorazon(x, y) {
-    const corazon = document.createElement("div");
-    corazon.className = "corazon-cursor";
-    corazon.style.left = x + "px";
-    corazon.style.top = y + "px";
-    const size = Math.random() * 8 + 6;
-    corazon.style.width = size + "px";
-    corazon.style.height = size + "px";
+function crearCorazon(x,y){
+
+    const corazon=document.createElement("div");
+
+    corazon.className="corazon-cursor";
+
+    corazon.style.left=x+"px";
+
+    corazon.style.top=y+"px";
+
+    const size=Math.random()*8+6;
+
+    corazon.style.width=size+"px";
+
+    corazon.style.height=size+"px";
+
     document.body.appendChild(corazon);
-    setTimeout(() => {
+
+    setTimeout(()=>{
+
         corazon.remove();
-    }, 1000);
+
+    },1000);
+
 }
 
-// =======================
-// Música Automática Inmersiva (Anti-bloqueo de Navegadores)
-// =======================
-const audio = document.getElementById("musica-fondo");
 
-window.addEventListener("load", () => {
-    audio.play().catch(() => {
-        // Fallback: si el navegador frena el autoplay por seguridad, sonará al primer toque o movimiento
-        const activarAudio = () => {
-            audio.play();
-            document.removeEventListener("click", activarAudio);
-            document.removeEventListener("touchstart", activarAudio);
-        };
-        document.addEventListener("click", activarAudio);
-        document.addEventListener("touchstart", activarAudio);
-    });
-});
 
 // =======================
-// Máquina de Escribir con Scroll Automatizado
+// Máquina de escribir
 // =======================
-document.addEventListener("DOMContentLoaded", () => {
-    const contenedor = document.querySelector(".efecto-escritura");
-    const lineas = document.querySelectorAll(".linea");
-    const textos = [];
 
-    // Guardamos los textos limpios y los escondemos inicialmente
-    lineas.forEach((linea) => {
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const contenedor=document.querySelector(".efecto-escritura");
+
+    const lineas=document.querySelectorAll(".linea");
+
+    const textos=[];
+
+    lineas.forEach((linea)=>{
+
         textos.push(linea.textContent);
-        linea.textContent = "";
-        linea.style.display = "none";
+
+        linea.textContent="";
+
+        linea.style.display="none";
+
     });
 
-    let lineaActual = 0;
+    let lineaActual=0;
 
-    function escribirLinea() {
-        if (lineaActual >= lineas.length) {
+    function escribirLinea(){
+
+        if(lineaActual>=lineas.length){
+
             return;
+
         }
 
-        const elemento = lineas[lineaActual];
-        const texto = textos[lineaActual];
+        const elemento=lineas[lineaActual];
 
-        elemento.style.display = "block";
+        const texto=textos[lineaActual];
+
+        elemento.style.display="block";
+
         elemento.classList.add("escribiendo");
 
-        let indice = 0;
+        let indice=0;
 
-        function escribir() {
-            if (indice <= texto.length) {
-                elemento.textContent = texto.substring(0, indice);
+        function escribir(){
+
+            if(indice<=texto.length){
+
+                elemento.textContent=texto.substring(0,indice);
+
                 indice++;
-                // Hace scroll hacia abajo automáticamente conforme avanza la escritura
-                contenedor.scrollTop = contenedor.scrollHeight;
-                setTimeout(escribir, 35);
-            } else {
+
+                contenedor.scrollTop=contenedor.scrollHeight;
+
+                setTimeout(escribir,35);
+
+            }else{
+
                 elemento.classList.remove("escribiendo");
+
                 lineaActual++;
-                setTimeout(escribirLinea, 900); // Pausa bonita de casi 1 segundo entre párrafos
+
+                setTimeout(escribirLinea,900);
+
             }
+
         }
+
         escribir();
+
     }
 
-    setTimeout(escribirLinea, 800); // Pequeña espera inicial antes de empezar la primera letra
+    setTimeout(escribirLinea,800);
+
 });
 
 </script>
