@@ -209,15 +209,16 @@ body{
 }
 
 /* Animación balanceada perfectamente para las 10 imágenes */
-.slider-apilado .d1  { animation: desvanecimientoCruzado 48s infinite 0s; }
-.slider-apilado .d2  { animation: desvanecimientoCruzado 48s infinite 6s; }
-.slider-apilado .d3  { animation: desvanecimientoCruzado 48s infinite 12s; }
-.slider-apilado .d4  { animation: desvanecimientoCruzado 48s infinite 18s; }
-.slider-apilado .d5  { animation: desvanecimientoCruzado 48s infinite 24s; }
-.slider-apilado .d6  { animation: desvanecimientoCruzado 48s infinite 30s; }
-.slider-apilado .d7  { animation: desvanecimientoCruzado 48s infinite 36s; }
-.slider-apilado .d8  { animation: desvanecimientoCruzado 48s infinite 42s; }
-.slider-apilado .d9  { animation: desvanecimientoCruzado 48s infinite 48s; }
+.slider-apilado .d1  { animation: desvanecimientoCruzado 54s infinite 0s; }
+.slider-apilado .d2  { animation: desvanecimientoCruzado 54s infinite 6s; }
+.slider-apilado .d3  { animation: desvanecimientoCruzado 54s infinite 12s; }
+.slider-apilado .d4  { animation: desvanecimientoCruzado 54s infinite 18s; }
+.slider-apilado .d5  { animation: desvanecimientoCruzado 54s infinite 24s; }
+.slider-apilado .d6  { animation: desvanecimientoCruzado 54s infinite 30s; }
+.slider-apilado .d7  { animation: desvanecimientoCruzado 54s infinite 36s; }
+.slider-apilado .d8  { animation: desvanecimientoCruzado 54s infinite 42s; }
+.slider-apilado .d9  { animation: desvanecimientoCruzado 54s infinite 48s; }
+.slider-apilado .d10  { animation: desvanecimientoCruzado 54s infinite 54s; }
 @keyframes desvanecimientoCruzado{
 
     0%,15%{
